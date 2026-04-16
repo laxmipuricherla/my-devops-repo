@@ -23,6 +23,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying application...'
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Hello Jenkins'
             }
         }
     }
