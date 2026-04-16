@@ -1,5 +1,10 @@
-stage('Test') {
-    steps {
-        sh 'echo "HELLO FROM TERMINAL VERIFY"'
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo Hello'
+            }
+        }
     }
 }
