@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
-            steps {
-                echo 'Cloning repository...'
-            }
-        }
-
         stage('Build') {
             steps {
                 echo 'Building application...'
@@ -23,10 +17,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying application...'
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Hello Jenkins'
             }
         }
     }
