@@ -1,1 +1,5 @@
-echo "DEPLOY V2"
+stage('Test') {
+    steps {
+        sh 'echo "HELLO FROM TERMINAL VERIFY"'
+    }
+}
