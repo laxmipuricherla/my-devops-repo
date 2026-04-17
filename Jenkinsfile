@@ -2,19 +2,23 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Clone') {
             steps {
-                sh 'echo "Build running"'
+                echo 'Cloning code...'
             }
         }
 
-        stage('Deploy') {
+        stage('Build') {
             steps {
-                sh '''
-                echo "Restarting service..."
-                sudo systemctl restart myapp
-                '''
+                echo 'Building project...'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
             }
         }
     }
+}
 }
